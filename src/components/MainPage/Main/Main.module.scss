@@ -1,0 +1,81 @@
+.main {
+  padding-top: 65px;
+
+  @media (min-width: 1024px) {
+    padding: 0;
+  }
+
+  &__hospital {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1024px) {
+      flex-direction: row-reverse;
+    }
+
+    &__hospitalImage {
+      max-width: 100%;
+
+      @media (min-width: 1024px) {
+        max-width: 50%;
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: .5rem;
+      background-color: #F8FBFA;
+      padding: 40px 0;
+
+      @media (min-width: 1024px) {
+        align-items: center;
+        width: 100%;
+      }
+
+      &__wrapper {
+        width: 340px;
+        margin: 0 auto;
+
+        @media (min-width: 768px) {
+          width: 600px;
+        }
+
+        @media (min-width: 1024px) {
+          width: 255px;
+        }
+
+        @media (min-width: 1920px) {
+          width: 400px;
+          padding-left: 200px;
+        }
+
+      }
+
+      &__title {
+        margin: 0;
+        font: bold 26px/33px 'PT Sans Caption', sans-serif;
+        color: #364844;
+
+        @media (min-width: 1920px) {
+          font: bold 35px/38px 'PT Sans Caption', sans-serif;
+        }
+      }
+
+      &__subTitle {
+        margin: 0;
+        color: #364844;
+        font: normal 15px/21px 'PT Sans Caption', sans-serif;
+
+        @media (min-width: 1024px) {
+          align-items: center;
+        }
+
+        @media (min-width: 1920px) {
+          font: normal 21px/27px 'PT Sans Caption', sans-serif;
+        }
+      }
+    }
+  }
+}

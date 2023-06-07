@@ -1,0 +1,61 @@
+.registration {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1.3rem 1rem 1rem 1rem;
+
+    &__title {
+      margin: 0;
+      font-size: 1.9rem;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    &__checkbox {
+      display: flex;
+      justify-content: flex-start;
+      max-width: 500px;
+
+      p {
+        font: 15px/17px Poppins, sans-serif;
+      }
+    }
+
+    &__submit {
+      font: normal 14px/18px 'PT Sans Caption', sans-serif;
+      padding: 10px 25px;
+      border-radius: 35px;
+      background-color: #0DBC91;
+      color: #fff;
+      border: none;
+      transition: .3s all;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #00D29F;
+      }
+
+      &:disabled {
+        background-color: rgba(0, 210, 159, 0.5);
+      }
+    }
+  }
+
+.auth {
+  margin: 0;
+
+  &__signup {
+    text-decoration: none;
+    margin-left: 5px;
+    color: #0DBC91;
+    font: normal 17px/19px Poppins, sans-serif;
+  }
+}
