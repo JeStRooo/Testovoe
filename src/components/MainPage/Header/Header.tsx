@@ -20,6 +20,12 @@ const Header: React.FC = () => {
   const isShowClass = isShowMenu ? classes.header__navigationMobile__menuButtonActive
                                   : classes.header__navigationMobile__menuButton
 
+  const openMaps = () => {
+    const encodedAddress = encodeURIComponent('ул. Ленина, 2БЛенинаван, Ростовская обл., 346818\n');
+    const href = `https://www.google.com/maps/place/${encodedAddress}`;
+    window.open(href, '_blank');
+  };
+
   return (
     <header className={classes.header}>
         <section className={classes.header__wrapper}>
@@ -59,7 +65,9 @@ const Header: React.FC = () => {
           <div className={classes.header__ourLocation}>
             <img src={logoGreen} alt="Лого" width="62px"/>
             <MediaQuery minWidth={1024}>
-              <div className={classes.header__ourLocation__findUs}>
+              <div className={classes.header__ourLocation__findUs}
+                   onClick={openMaps}
+              >
                 <div className={classes.header__ourLocation__findUs__city}>
                   <img src={locationIcon} alt="Наше местоположение" />
                   <p className={classes.header__ourLocation__findUs__city__cityName}>
